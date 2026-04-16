@@ -77,8 +77,8 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba
 
 /* NAV DROPDOWNS */
 .nav-item { position: relative; }
-.nav-dropdown { position: absolute; top: calc(100% + 4px); left: 0; background: rgba(7,15,28,0.97); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 8px; min-width: 240px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 200; pointer-events: none; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
-.nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: all; }
+.nav-dropdown { position: absolute; top: 100%; left: 0; background: rgba(7,15,28,0.97); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 12px 8px 8px; min-width: 240px; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.2s, transform 0.2s, visibility 0.2s; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); z-index: 200; pointer-events: none; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+.nav-item.open .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: all; }
 .nav-dropdown a { display: block !important; padding: 9px 14px !important; font-size: 13px !important; color: rgba(255,255,255,0.62) !important; border-radius: 6px !important; white-space: nowrap !important; background: none !important; width: 100%; }
 .nav-dropdown a:hover { color: var(--white) !important; background: rgba(255,255,255,0.07) !important; }
 .has-dropdown::after { content: ' ▾'; font-size: 9px; opacity: 0.5; margin-left: 2px; }
@@ -328,7 +328,7 @@ footer { background: var(--navy); padding: 56px 28px 32px; border-top: 1px solid
   .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 20px 28px; gap: 8px; border-bottom: 1px solid var(--border); max-height: calc(100vh - 68px); overflow-y: auto; z-index: 99; }
   .nav-toggle { display: flex; }
   .nav-dropdown { position: static !important; opacity: 1 !important; visibility: visible !important; transform: none !important; box-shadow: none !important; background: rgba(255,255,255,0.03) !important; border: none !important; border-left: 2px solid var(--blue-border) !important; border-radius: 0 !important; padding: 4px 0 4px 12px !important; margin: 2px 0 4px !important; pointer-events: all !important; min-width: 0 !important; display: none; }
-  .nav-item.mob-open .nav-dropdown { display: block; }
+  .nav-item.open .nav-dropdown { display: block; }
 }
 @media (max-width: 600px) {
   .services-grid { grid-template-columns: 1fr; }
