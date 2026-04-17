@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Presence Setup for Bay Area Small Businesses | LineSight Digital</title>
+<meta name="description" content="Professional website design and SEO setup for Bay Area small businesses. No WordPress, no monthly platform fees — fast, secure, and built to rank. Includes competitor research, Google Search Console, and ongoing support.">
+<link rel="canonical" href="https://linesightdigital.com/services/web-presence/">
+<meta property="og:title" content="Web Presence Setup | LineSight Digital">
+<meta property="og:description" content="Professional website design and SEO setup for Bay Area small businesses. No WordPress, no monthly platform fees — fast, secure, and built to rank.">
+<meta property="og:url" content="https://linesightdigital.com/services/web-presence/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/subpage.css">
+<style>
+/* PRICING TIERS */
+.pricing-section { padding: 80px 28px; background: var(--navy-mid, #0C1B2E); }
+.tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
+.tier-card {
+  background: var(--navy-card, #0F1F35);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: border-color .2s, transform .2s;
+}
+.tier-card:hover { border-color: rgba(59,130,246,0.3); transform: translateY(-3px); }
+.tier-card.featured {
+  border-color: #2563EB;
+  background: linear-gradient(145deg, rgba(37,99,235,0.1), var(--navy-card, #0F1F35));
+}
+.tier-badge {
+  position: absolute;
+  top: -12px; left: 50%;
+  transform: translateX(-50%);
+  background: #2563EB;
+  color: #fff;
+  font-size: 11px; font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  font-family: 'Outfit', sans-serif;
+}
+.tier-name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px; font-weight: 700;
+  color: #64748B;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tier-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 42px; font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 4px;
+}
+.tier-price-note { font-size: 13px; color: #64748B; margin-bottom: 16px; }
+.tier-tagline {
+  font-size: 14px;
+  color: #94A3B8;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex: 0;
+}
+.tier-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex: 1;
+}
+.tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: #94A3B8;
+  line-height: 1.5;
+}
+.tier-features li::before {
+  content: '✓';
+  font-size: 10px; font-weight: 700;
+  color: #3B82F6;
+  background: rgba(37,99,235,0.12);
+  border: 1px solid rgba(37,99,235,0.2);
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.tier-cta {
+  display: block;
+  text-align: center;
+  padding: 13px;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px; font-weight: 700;
+  text-decoration: none;
+  transition: background .2s, box-shadow .2s;
+  background: var(--blue, #2563EB);
+  color: #fff;
+  margin-top: auto;
+}
+.tier-cta:hover { background: #3B82F6; box-shadow: 0 4px 20px rgba(37,99,235,0.3); }
+
+/* RETAINER STRIP */
+.retainer-strip {
+  background: rgba(37,99,235,0.08);
+  border: 1px solid rgba(37,99,235,0.18);
+  border-radius: 14px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.retainer-left h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px; font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.retainer-left p { font-size: 14px; color: #94A3B8; line-height: 1.6; max-width: 480px; }
+.retainer-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px; font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+  letter-spacing: -1px;
+}
+.retainer-price span { font-size: 14px; font-weight: 400; color: #64748B; letter-spacing: 0; }
+
+/* PROCESS / HOW */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+  position: relative;
+}
+.how-grid::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(12.5% + 32px);
+  right: calc(12.5% + 32px);
+  border-top: 1px dashed rgba(59,130,246,0.25);
+}
+.how-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 12px;
+}
+.how-num {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--navy-card, #0F1F35);
+  border: 1px solid rgba(59,130,246,0.22);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px; font-weight: 800;
+  color: #3B82F6;
+  margin-bottom: 20px;
+  position: relative; z-index: 1;
+  transition: background .2s;
+}
+.how-step:hover .how-num { background: #2563EB; color: #fff; }
+.how-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px; font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.how-desc { font-size: 13px; color: #94A3B8; line-height: 1.6; }
+
+/* PROOF / EXAMPLES */
+.examples-section { padding: 80px 28px; background: var(--navy, #070F1C); }
+.examples-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+.example-card {
+  background: var(--navy-card, #0F1F35);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color .2s;
+}
+.example-card:hover { border-color: rgba(59,130,246,0.22); }
+.example-img {
+  height: 200px;
+  background: var(--navy-light, #142036);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.example-img-bg {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: top center;
+  opacity: 0.35;
+}
+.example-body { padding: 22px 24px; }
+.example-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: #3B82F6;
+  margin-bottom: 6px;
+}
+.example-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px; font-weight: 700;
+  color: #fff; margin-bottom: 8px;
+}
+.example-desc { font-size: 13px; color: #94A3B8; line-height: 1.6; margin-bottom: 14px; }
+.example-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.echip {
+  font-size: 11px; font-weight: 600;
+  padding: 3px 10px; border-radius: 100px;
+  background: rgba(37,99,235,0.1);
+  border: 1px solid rgba(37,99,235,0.2);
+  color: #93C5FD;
+}
+
+/* WHAT'S INCLUDED TABLE */
+.includes-section { padding: 80px 28px; background: var(--navy-mid, #0C1B2E); }
+.includes-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 36px;
+}
+.include-item {
+  background: var(--navy-card, #0F1F35);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.ii-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+.ii-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px; font-weight: 700;
+  color: #fff; margin-bottom: 3px;
+}
+.ii-desc { font-size: 13px; color: #94A3B8; line-height: 1.5; }
+
+@media (max-width: 960px) {
+  .tier-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+  .how-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .how-grid::before { display: none; }
+  .examples-grid { grid-template-columns: 1fr; }
+  .includes-list { grid-template-columns: 1fr; }
+  .retainer-strip { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+  .how-grid { grid-template-columns: 1fr; }
+  .pricing-section { padding: 60px 20px; }
+  .examples-section { padding: 60px 20px; }
+  .includes-section { padding: 60px 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><span class="logo-dot"></span>LineSight<span>Digital</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li class="nav-item">
+        <a href="/services/" class="has-dropdown">IT Services</a>
+        <div class="nav-dropdown">
+          <a href="/services/managed-it/">Managed IT &amp; RMM</a>
+          <a href="/services/cybersecurity/">Cybersecurity</a>
+          <a href="/services/microsoft-365/">Microsoft 365 &amp; Entra ID</a>
+          <a href="/services/network-management/">Network Management</a>
+          <a href="/services/backup-disaster-recovery/">Backup &amp; Disaster Recovery</a>
+          <a href="/services/cloud-infrastructure/">Cloud Infrastructure</a>
+          <a href="/services/it-assessments/">IT Assessments &amp; Fractional CTO</a>
+          <a href="/services/web-presence/" style="color:#93C5FD !important;">Web Presence Setup</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="/industries/" class="has-dropdown">Industries</a>
+        <div class="nav-dropdown">
+          <a href="/industries/dental/">Dental Offices</a>
+          <a href="/industries/medical/">Medical &amp; Healthcare</a>
+          <a href="/industries/real-estate/">Real Estate</a>
+          <a href="/industries/legal/">Legal &amp; Law Firms</a>
+          <a href="/industries/accounting/">Accounting &amp; CPA Firms</a>
+          <a href="/industries/startups/">Startups &amp; Tech</a>
+          <a href="/industries/construction/">Construction &amp; Contractors</a>
+        </div>
+      </li>
+      <li><a href="/#process">How It Works</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="https://blog.linesightdigital.com" target="_blank" rel="noopener">Blog</a></li>
+      <li><a href="/#contact" class="nav-cta">Free Assessment</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('/images/hero-bg-web-presence.webp')"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="breadcrumb-sep">&#8250;</span>
+      <a href="/services/">IT Services</a><span class="breadcrumb-sep">&#8250;</span>
+      Web Presence Setup
+    </div>
+    <h1>A Professional Website That <em>Actually Ranks</em></h1>
+    <p class="page-hero-sub">No WordPress. No monthly platform fees. No bloated page builders. A fast, secure, SEO-optimized site built to outperform your competitors — and stay that way.</p>
+    <div class="page-hero-tags">
+      <span class="ptag">Custom Design</span>
+      <span class="ptag">Competitor Research</span>
+      <span class="ptag">On-Page SEO</span>
+      <span class="ptag">Google Search Console</span>
+      <span class="ptag">Cloudflare CDN</span>
+      <span class="ptag">Zero Platform Fees</span>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="page-section page-section-alt">
+  <div class="page-inner">
+    <span class="section-eyebrow">The Process</span>
+    <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:8px;">From Brief to Live in Weeks, Not Months</h2>
+    <p style="font-size:15px;color:#94A3B8;max-width:520px;">A structured process means no surprises, no scope creep, and a launch you can actually plan around.</p>
+    <div class="how-grid">
+      <div class="how-step">
+        <div class="how-num">01</div>
+        <div class="how-title">Discovery</div>
+        <p class="how-desc">We review your business, your competitors, and your target keywords. You fill out a brief — we handle the research.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">02</div>
+        <div class="how-title">Design &amp; Build</div>
+        <p class="how-desc">Custom HTML/CSS — no templates, no drag-and-drop. Built for speed, mobile, and search engines from the ground up.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">03</div>
+        <div class="how-title">SEO Setup</div>
+        <p class="how-desc">Meta titles, descriptions, schema markup, sitemap, GSC verification, and internal linking structure — all configured before launch.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-num">04</div>
+        <div class="how-title">Launch &amp; Handoff</div>
+        <p class="how-desc">Live on GitHub Pages + Cloudflare in minutes. You get full access — no vendor lock-in, no monthly platform fees, ever.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT'S INCLUDED -->
+<div class="includes-section">
+  <div class="page-inner">
+    <span class="section-eyebrow">What's Included</span>
+    <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:8px;">Built Right From the Start</h2>
+    <p style="font-size:15px;color:#94A3B8;max-width:520px;">Every engagement includes the infrastructure and SEO work that most web designers skip or charge extra for.</p>
+    <div class="includes-list">
+      <div class="include-item">
+        <div class="ii-icon">🔍</div>
+        <div>
+          <div class="ii-title">Competitor Research</div>
+          <div class="ii-desc">We analyze 3–5 competitors — their site structure, page content, keyword targets, and gaps you can exploit.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="ii-icon">⚡</div>
+        <div>
+          <div class="ii-title">Performance-First Build</div>
+          <div class="ii-desc">Static HTML served via Cloudflare CDN. PageSpeed scores that beat WordPress sites by default — no plugins required.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="ii-icon">🗺️</div>
+        <div>
+          <div class="ii-title">Keyword Mapping</div>
+          <div class="ii-desc">Target keywords mapped to each page based on search intent — so every page is working toward something specific.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="ii-icon">📊</div>
+        <div>
+          <div class="ii-title">Google Search Console</div>
+          <div class="ii-desc">GSC verified, sitemap submitted, and indexing confirmed before handoff. You know you're being crawled from day one.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="ii-icon">📱</div>
+        <div>
+          <div class="ii-title">Mobile Responsive</div>
+          <div class="ii-desc">Fully responsive across devices. Google ranks the mobile version — so this isn't optional, it's the baseline.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="ii-icon">🔒</div>
+        <div>
+          <div class="ii-title">HTTPS + Cloudflare</div>
+          <div class="ii-desc">SSL certificate, Cloudflare proxy, DDoS protection, and CDN caching configured and tested at launch.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="ii-icon">✉️</div>
+        <div>
+          <div class="ii-title">Contact Form</div>
+          <div class="ii-desc">Working contact form with spam filtering and email delivery — no backend server, no monthly form fees.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <div class="ii-icon">📝</div>
+        <div>
+          <div class="ii-title">Schema &amp; Meta</div>
+          <div class="ii-desc">Structured data (JSON-LD), canonical URLs, Open Graph tags, and meta descriptions — all the on-page SEO fundamentals.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROOF / EXAMPLES -->
+<div class="examples-section">
+  <div class="page-inner">
+    <span class="section-eyebrow">Live Examples</span>
+    <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:8px;">Sites We've Built</h2>
+    <p style="font-size:15px;color:#94A3B8;max-width:520px;">Both built on the same stack — GitHub Pages, Cloudflare, custom HTML/CSS. Zero monthly platform fees.</p>
+    <div class="examples-grid">
+      <div class="example-card">
+        <div class="example-img">
+          <div class="example-img-bg" style="background-image:url('/images/hero-bg-network-infrastructure.png')"></div>
+          <span style="position:relative;z-index:1;">🖥️</span>
+        </div>
+        <div class="example-body">
+          <div class="example-label">IT Managed Services</div>
+          <div class="example-title">LineSight Digital</div>
+          <div class="example-desc">Full business site with service pages, industry pages, blog, pricing, FAQ, and contact form. SEO-optimized for Bay Area IT services keywords.</div>
+          <div class="example-chips">
+            <span class="echip">14 Service/Industry Pages</span>
+            <span class="echip">Hugo Blog</span>
+            <span class="echip">GSC Indexed</span>
+            <span class="echip">Schema Markup</span>
+          </div>
+        </div>
+      </div>
+      <div class="example-card">
+        <div class="example-img">
+          <div class="example-img-bg" style="background-image:url('/images/hero-bg-network-infrastructure.png')"></div>
+          <span style="position:relative;z-index:1;">🪧</span>
+        </div>
+        <div class="example-body">
+          <div class="example-label">Sign Design &amp; Fabrication</div>
+          <div class="example-title">ClearLine Signs</div>
+          <div class="example-desc">Local business site for a Bay Area sign company. Built for local SEO, Google Business Profile alignment, and service-specific landing pages.</div>
+          <div class="example-chips">
+            <span class="echip">Local SEO Focus</span>
+            <span class="echip">Cloudflare CDN</span>
+            <span class="echip">Zero Platform Fees</span>
+            <span class="echip">Mobile Optimized</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING TIERS -->
+<div class="pricing-section">
+  <div class="page-inner">
+    <span class="section-eyebrow">Pricing</span>
+    <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:8px;">Straightforward Pricing, No Surprises</h2>
+    <p style="font-size:15px;color:#94A3B8;max-width:520px;">Three tiers based on scope. All include the infrastructure and SEO work most agencies skip.</p>
+    <div class="tier-grid">
+
+      <!-- TIER 1 -->
+      <div class="tier-card">
+        <div class="tier-name">Starter Presence</div>
+        <div class="tier-price">$1,500</div>
+        <div class="tier-price-note">– $2,500 flat</div>
+        <div class="tier-tagline">For solo operators and early-stage businesses that need a professional online presence fast.</div>
+        <ul class="tier-features">
+          <li>Custom HTML/CSS design — no templates</li>
+          <li>Up to 5 pages (Home, About, Services, Contact, Blog)</li>
+          <li>GitHub Pages + Cloudflare hosting setup</li>
+          <li>Custom domain and DNS configuration</li>
+          <li>Working contact form with spam filtering</li>
+          <li>Mobile responsive across all devices</li>
+          <li>On-page SEO — meta, schema, canonicals, sitemap</li>
+          <li>Google Search Console setup and submission</li>
+          <li>1 round of revisions</li>
+        </ul>
+        <a href="/#contact" class="tier-cta">Get Started →</a>
+      </div>
+
+      <!-- TIER 2 -->
+      <div class="tier-card featured">
+        <div class="tier-badge">Most Popular</div>
+        <div class="tier-name">Business Site + SEO</div>
+        <div class="tier-price">$3,500</div>
+        <div class="tier-price-note">– $5,500 flat</div>
+        <div class="tier-tagline">For SMBs that need to rank locally or within their niche and compete with established players.</div>
+        <ul class="tier-features">
+          <li>Everything in Starter, plus:</li>
+          <li>Competitor research — 3–5 competitor analysis</li>
+          <li>Keyword mapping per page based on search intent</li>
+          <li>Blog setup (Hugo + GitHub Actions)</li>
+          <li>2–3 starter blog posts</li>
+          <li>Up to 10 pages including service/industry pages</li>
+          <li>Google Business Profile optimization</li>
+          <li>Internal linking structure</li>
+          <li>Page speed optimization</li>
+          <li>2 rounds of revisions</li>
+        </ul>
+        <a href="/#contact" class="tier-cta">Get Started →</a>
+      </div>
+
+      <!-- TIER 3 -->
+      <div class="tier-card">
+        <div class="tier-name">Full Digital Presence</div>
+        <div class="tier-price">$6,500</div>
+        <div class="tier-price-note">– $10,000+ flat</div>
+        <div class="tier-tagline">For funded startups and established SMBs doing a full rebrand or digital presence buildout.</div>
+        <ul class="tier-features">
+          <li>Everything in Business Site, plus:</li>
+          <li>Custom domain email setup (Zoho, M365, or Google Workspace)</li>
+          <li>LinkedIn Company Page setup + profile alignment</li>
+          <li>Brand asset creation (AI-generated imagery, Canva)</li>
+          <li>5–6 blog posts</li>
+          <li>Competitor ranking gap analysis</li>
+          <li>Google Search Console monitoring for 90 days</li>
+          <li>Monthly ranking report for 90 days</li>
+          <li>3 rounds of revisions</li>
+        </ul>
+        <a href="/#contact" class="tier-cta">Get Started →</a>
+      </div>
+
+    </div>
+
+    <!-- RETAINER -->
+    <div class="retainer-strip">
+      <div class="retainer-left">
+        <h3>Monthly Retainer — Keep It Growing</h3>
+        <p>One blog post per month, GSC monitoring and ranking report, minor content updates, and site maintenance. This is where the compounding SEO value lives — a site that gets better every month without you touching it.</p>
+      </div>
+      <div>
+        <div class="retainer-price">$300–$750<span>/month</span></div>
+        <a href="/#contact" style="display:block;margin-top:12px;text-align:center;font-size:13px;font-weight:600;color:#3B82F6;text-decoration:none;">Inquire →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY THIS STACK -->
+<div class="feature-section">
+  <div class="page-inner">
+    <span class="section-eyebrow">Why This Stack</span>
+    <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;line-height:1.15;margin-bottom:8px;">No WordPress. No Platform Fees. No Lock-In.</h2>
+    <p style="font-size:15px;color:#94A3B8;max-width:560px;">Most web designers build on WordPress or Wix because it's fast for them. We build on a stack that's better for you.</p>
+    <div class="feature-grid" style="margin-top:32px;">
+      <div class="feature-card">
+        <div class="fc-icon">⚡</div>
+        <h4>Faster Than WordPress</h4>
+        <p>Static HTML served from Cloudflare edge nodes worldwide. No PHP, no database queries, no plugin overhead slowing down every page load.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">💰</div>
+        <h4>Zero Monthly Platform Fees</h4>
+        <p>GitHub Pages hosting is free. Cloudflare CDN is free. No Wix subscription, no WordPress hosting bill, no theme renewals — ever.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🔒</div>
+        <h4>More Secure By Default</h4>
+        <p>No WordPress admin panel to brute-force. No plugins with CVEs. Static sites have a dramatically smaller attack surface than CMS-based sites.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🗝️</div>
+        <h4>You Own Everything</h4>
+        <p>Your site lives in your GitHub repository. You have full access to every file. No vendor lock-in, no proprietary builder, no platform that can raise prices or shut down.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">📈</div>
+        <h4>SEO-Optimized by Default</h4>
+        <p>Clean HTML, fast load times, proper meta structure, and schema markup from the start — the technical SEO fundamentals that WordPress sites have to work hard to match.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fc-icon">🤝</div>
+        <h4>Paired With IT Support</h4>
+        <p>Unlike a standalone web designer, we can also handle your DNS, email, Microsoft 365, and IT infrastructure — one relationship for your entire digital presence.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2>Ready to Outrank Your Competitors?</h2>
+    <p>Let's start with a competitor analysis — we'll show you what they rank for, what your site is missing, and exactly what it would take to close the gap.</p>
+    <a href="/#contact" class="btn-white">Start the Conversation →</a>
+  </div>
+</div>
+
+<!-- RELATED SERVICES -->
+<div class="related-section">
+  <div class="page-inner">
+    <span class="section-eyebrow">Often Paired Together</span>
+    <h2 style="font-family:'Outfit',sans-serif;font-size:clamp(22px,2.5vw,32px);font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.2;margin-bottom:8px;">Complete Your Digital Foundation</h2>
+    <div class="related-grid">
+      <a href="/services/microsoft-365/" class="related-card">
+        <div class="related-card-icon">☁️</div>
+        <h4>Microsoft 365 &amp; Email</h4>
+        <p>Professional domain email, M365 setup, and email security</p>
+      </a>
+      <a href="/services/it-assessments/" class="related-card">
+        <div class="related-card-icon">📋</div>
+        <h4>IT Assessment</h4>
+        <p>Full IT environment review alongside your web presence buildout</p>
+      </a>
+      <a href="/services/managed-it/" class="related-card">
+        <div class="related-card-icon">🖥️</div>
+        <h4>Managed IT</h4>
+        <p>Ongoing IT support once your digital foundation is in place</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="font-size:18px;"><span class="logo-dot"></span>LineSight<span>Digital</span></a>
+        <p>IT consulting, security, and managed IT services for Bay Area startups and small businesses.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/company/linesightdigital" target="_blank" rel="noopener" class="fsocial-btn" title="LinkedIn">in</a>
+          <a href="https://blog.linesightdigital.com" class="fsocial-btn" title="Blog">&#9997;</a>
+          <a href="mailto:info@linesightdigital.com" class="fsocial-btn" title="Email">@</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>IT Services</h4>
+        <ul>
+          <li><a href="/services/managed-it/">Managed IT &amp; RMM</a></li>
+          <li><a href="/services/cybersecurity/">Cybersecurity</a></li>
+          <li><a href="/services/microsoft-365/">Microsoft 365</a></li>
+          <li><a href="/services/network-management/">Network Management</a></li>
+          <li><a href="/services/backup-disaster-recovery/">Backup &amp; DR</a></li>
+          <li><a href="/services/cloud-infrastructure/">Cloud Infrastructure</a></li>
+          <li><a href="/services/it-assessments/">IT Assessments</a></li>
+          <li><a href="/services/web-presence/">Web Presence Setup</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Industries</h4>
+        <ul>
+          <li><a href="/industries/dental/">Dental</a></li>
+          <li><a href="/industries/medical/">Medical &amp; Healthcare</a></li>
+          <li><a href="/industries/real-estate/">Real Estate</a></li>
+          <li><a href="/industries/legal/">Legal</a></li>
+          <li><a href="/industries/accounting/">Accounting</a></li>
+          <li><a href="/industries/startups/">Startups &amp; Tech</a></li>
+          <li><a href="/industries/construction/">Construction</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/#why">Why LineSight</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="https://blog.linesightdigital.com" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 LineSight Digital. All rights reserved.</span>
+      <span>IT Consulting &amp; Managed Services &middot; Bay Area, CA</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js"></script>
+</body>
+</html>
